@@ -1,4 +1,4 @@
-WebAssembly.instantiateStreaming(fetch('./add.wasm')).then(res => {
+WebAssembly.instantiateStreaming(fetch('./add.wasm')).then((res) => {
   const { instance } = res;
   const { add } = instance.exports;
   console.log(add('1', 34));
@@ -6,4 +6,3 @@ WebAssembly.instantiateStreaming(fetch('./add.wasm')).then(res => {
   console.log(add(false, 34)); // true 被转成 1，false 被转成 0
   // ...
 });
-
