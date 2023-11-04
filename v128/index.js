@@ -5,8 +5,6 @@ WebAssembly.instantiateStreaming(fetch('./v128.wasm')).then((res) => {
   const a = new Int32Array(memory.buffer, 0, 4);
   const b = new Int32Array(memory.buffer, 16, 4);
 
-  new Int8Array();
-
   // 初始化向量a和b的值
   a.set([1, 2, 3, 4]);
   b.set([5, 6, 7, 8]);
